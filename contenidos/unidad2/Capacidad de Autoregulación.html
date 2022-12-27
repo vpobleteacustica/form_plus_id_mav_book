@@ -1,0 +1,671 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>11. CAPACIDAD DE AUTORREGULACIÓN1 &#8212; Magister en Acústica y Vibraciones</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../search.html" />
+    <link rel="next" title="12. ANEXO 7: FICHA ACADÉMICA:" href="../unidad3/Anexo%207%20Fichas%20Acad%C3%A9micas.html" />
+    <link rel="prev" title="10. RECURSOS DE APOYO" href="Recursos%20de%20Apoyo.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="es">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Magister en Acústica y Vibraciones</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../README.html">
+                    Ficha de solicitud de incorporación al proceso de acreditación de magister y Formulario de antecedentes, Magister en Acústica y Vibraciones, Universidad Austral de Chile»
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  FICHA DE SOLICITUD DE INCORPORACIÓN AL PROCESO DE ACREDITACIÓN DE MAGÍSTER
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../unidad1/Identificaci%C3%B3n%20del%20Programa.html">
+   1. Identificación del Programa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../unidad1/Definiciones.html">
+   2. Definiciones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../unidad1/Plan%20de%20Estudios.html">
+   3. Plan de Estudios
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../unidad1/Cuerpo%20Academico.html">
+   4. Cuerpo Académico
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../unidad1/Otros%20Aspectos%20de%20Acreditaci%C3%B3n.html">
+   5. Otros Aspectos de Acreditación
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  FORMULARIO DE ANTECEDENTES
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Identificaci%C3%B3n%20del%20Programa.html">
+   6. IDENTIFICACIÓN DEL PROGRAMA
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Contexto%20Institucional.html">
+   7. CONTEXTO INSTITUCIONAL
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Caracter%C3%ADsticas%20y%20Resultados%20del%20Programa.html">
+   8. CARACTERÍSTICAS Y RESULTADOS DEL PROGRAMA
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Cuerpo%20Academico.html">
+   9. CUERPO ACADÉMICO
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Recursos%20de%20Apoyo.html">
+   10. RECURSOS DE APOYO
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   11. CAPACIDAD DE AUTORREGULACIÓN
+   <sup style="font-size: 12px;">
+    1
+   </sup>
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  ANEXO 7 FICHAS ACADÉMICAS
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../unidad3/Anexo%207%20Fichas%20Acad%C3%A9micas.html">
+   12. ANEXO 7:	FICHA ACADÉMICA:
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/contenidos/unidad2/Capacidad de Autoregulación.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/contenidos/unidad2/Capacidad de Autoregulación.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#otros-procesos-de-evaluacion">
+   11.1.
+   <em>
+    Otros procesos de evaluación
+   </em>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#difusion-del-programa">
+   11.2.
+   <em>
+    Difusión del programa
+   </em>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sintesis-de-los-avances-respecto-del-proceso-de-acreditacion-anterior">
+   11.3.
+   <em>
+    Síntesis de los avances respecto del proceso de acreditación anterior
+   </em>
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>CAPACIDAD DE AUTORREGULACIÓN<sup style="font-size: 12px;">1</sup></h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#otros-procesos-de-evaluacion">
+   11.1.
+   <em>
+    Otros procesos de evaluación
+   </em>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#difusion-del-programa">
+   11.2.
+   <em>
+    Difusión del programa
+   </em>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sintesis-de-los-avances-respecto-del-proceso-de-acreditacion-anterior">
+   11.3.
+   <em>
+    Síntesis de los avances respecto del proceso de acreditación anterior
+   </em>
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="capacidad-de-autorregulacion-sup-style-font-size-12px-1-sup">
+<h1><span class="section-number">11. </span>CAPACIDAD DE AUTORREGULACIÓN<sup style="font-size: 12px;">1</sup><a class="headerlink" href="#capacidad-de-autorregulacion-sup-style-font-size-12px-1-sup" title="Enlazar permanentemente con este título">#</a></h1>
+<section id="otros-procesos-de-evaluacion">
+<h2><span class="section-number">11.1. </span><em>Otros procesos de evaluación</em><a class="headerlink" href="#otros-procesos-de-evaluacion" title="Enlazar permanentemente con este título">#</a></h2>
+<table align="left" style="width:100%">
+    <tbody style="font-size: 14px";>
+        <tr>
+            <td style="width: 7px;background:#036ED1;"></td>
+            <td style="outline: thin solid" rowspan="1" colspan="1"><div style="text-align: justify; ">Si bien el programa no se ha sometido previamente a procesos externos de evaluación, el MAV ha sido parte del conjunto de operaciones de diagnóstico realizadas periódicamente en el nivel institucional, como parte de las políticas de seguimiento de los compromisos declarados en el Plan Estratégico Institucional (Anexo 12). En el mismo contexto de estos compromisos, la Dirección de Estudios de Postgrado realizó entre 2016-2019 un monitoreo intensivo y global al conjunto de programas de magíster de la institución (Anexo 20) como parte de un plan institucional para el mejoramiento de la acreditación de los programas de magíster. El plan incrementar la tasa institucional de acreditación de magíster de 35% en 2015 a 77% en 2021. Las actividades de autoevaluación y mejora continua del MAV se sitúan en el marco de dicho plan.</div><br>
+            </td>
+        </tr>
+</tbody>
+</table>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</section>
+<section id="difusion-del-programa">
+<h2><span class="section-number">11.2. </span><em>Difusión del programa</em><a class="headerlink" href="#difusion-del-programa" title="Enlazar permanentemente con este título">#</a></h2>
+<table align="left" style="width:100%">
+    <tbody style="font-size: 14px";>
+        <tr>
+            <td style="width: 7px;background:#036ED1;"></td>
+            <td style="outline: thin solid" rowspan="1" colspan="1"><div style="text-align: justify; ">El instrumento base de difusión del programa es el sitio institucional <a href="http://www.acusticauach.cl">www.acusticauach.cl</a>, administrado desde el Instituto de Acústica, y cuya información se nutre de la descripción del programa en sus distintos componentes (denominación, objetivos, plan de estudios, líneas de investigación, cuerpo docente, infraestructura, periodo de postulaciones, requisitos de admisión, sistema de selección, costo de aranceles, becas disponibles, calendario académico, otros) oficialmente sancionada en las instancias institucionales respectivas. Desde esa información base se nutren, además, materiales de difusión complementarios como folletería, catálogos, recursos de difusión específicos para distribución en eventos internacionales, ferias de postgrado o afines. En todos los casos, al tratarse de instrumentos de difusión articulados sobre la base de su coherencia con respecto a las descripciones del programa institucionalmente sancionadas, incluidas sus actualizaciones, la información que se otorga a los estudiantes (y al público en general) es consistente y fidedigna respecto de las características reales del programa y de los compromisos de la institución en relación con los servicios ofrecidos y el respeto a las condiciones de formación declaradas en esas descripciones.</div><br>
+            </td>
+        </tr>
+</tbody>
+</table>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</section>
+<section id="sintesis-de-los-avances-respecto-del-proceso-de-acreditacion-anterior">
+<h2><span class="section-number">11.3. </span><em>Síntesis de los avances respecto del proceso de acreditación anterior</em><a class="headerlink" href="#sintesis-de-los-avances-respecto-del-proceso-de-acreditacion-anterior" title="Enlazar permanentemente con este título">#</a></h2>
+<table align="left" style="width:100%">
+    <tbody style="font-size: 14px";>
+        <tr style="text-align: center; ">
+        <td style="width: 7px;background:#036ED1;"></td>    
+        <th style="outline: thin solid" colspan="1">
+            <br><div style="text-align: justify; ">Resolución Exenta de Acreditación de Postgrado CNA N° 1301 de 2020.</div><br>
+        </th>
+      </tr>
+</tbody>
+</table>
+<table align="left" style="width:100%">
+   <tbody style="font-size: 14px";>
+        <tr>
+            <td style="width: 7px;background:#036ED1;"></td>
+            <th style="outline: thin solid" rowspan="1" colspan="1"><div style="text-align: center; ">                       Debilidades u observaciones acreditación previa<br><br>Res. Exenta CNA 
+                N°1301 de 2020</div>
+            </th>
+            <th style="outline: thin solid" rowspan="1" colspan="1"><div style="text-align: center; ">                       Acciones de mejoramiento</div>
+            </th>
+            <th style="outline: thin solid" rowspan="1" colspan="1"><div style="text-align: center; ">                       Indicadores</div>
+            </th>
+            <th style="outline: thin solid" rowspan="1" colspan="1"><div style="text-align: center; ">                       Avances</div>
+            </th>
+        </tr>
+        <tr>
+            <td style="width: 7px;background:#036ED1;"></td>
+            <td style="outline: thin solid" rowspan="1" colspan="1"><div style="text-align: justify; ">                       <em>«La tasa de graduación es baja (58%) y los tiempos de permanencia de los graduados, en                   los últimos cinco años, superan la duración teórica definida en el plan de estudios (dos                     años)»</em></div><br>
+            </td>
+            <td style="outline: thin solid" rowspan="1" colspan="1"><div style="text-align: justify;">                       Potenciar el curso obligatorio Seminario de Tesis como instancia que garantice la elaboración                 y defensa oportuna del Proyecto de Tesis.<br><br>Incorporar la modalidad de tesis en formato                 artículo contemplada en la reglamentación del programa.<br><br>Implementar una reunión                       semestral del claustro en la que se presente el estado de avance de los estudiantes.<br><br>                 Propiciar el uso continuo de los espacios para tesistas implementados en el marco del                         Proyecto InnovING 2030.<br><br>Implementar becas internas para financiamiento de tesis.
+                </div><br>
+            </td>
+            <td style="outline: thin solid" rowspan="1" colspan="1"><div style="text-align: justify; ">                       Tasa total de graduación por cohorte (informe anual).<br><br>Tasa de graduación oportuna [DTP                 +1] en el total de graduados últimos cinco años (informe anual)<br><br>Tiempo promedio de                     permanencia en el programa graduados últimos cinco años (informe anual) .<br><br>Becas                       implementadas para financiamiento de tesis.</div><br>
+            </td>
+            <td style="outline: thin solid" rowspan="1" colspan="1"><div style="text-align: justify; ">                       Se registran avances importantes:<br><br>La tasa de graduación se incrementa de 58%, en el                   periodo 2009-2018, a 65% para el periodo 2013-2022 (en curso).<br><br>Si bien los tiempos de                 permanencia se mantienen altos y por sobre la duración teórica del programa, la tasa de                       graduación oportuna alcanza el 50% (8 de 16) del total de graduados en los últimos cinco                     años.<br><br> Se implementa la modalidad de tesis en formato artículo. Primeros estudiantes                   graduados en esta modalidad exhiben disminución significativa en los tiempos de permanencia.                 <br><br> Se implementan tres tipos de becas para financiamiento de tesis: Beca FCI InnovING                   2030 para tesis en el sector productivo; Becas de Proyectos de Tesis VIDCA-DPOST; Beca para                   Tesis en Innovación y Desarrollo VIDCA-DPOST.
+                </div><br>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 7px;background:#036ED1;"></td>
+            <td style="outline: thin solid" rowspan="1" colspan="1"><div style="text-align: justify; ">                       <em>«Sólo cuatro de los diez miembros del Claustro cumplen con la orientación de                             productividad del Comité de Área de Ingeniería y Ciencias de la Tierra y del Comité de Área                   de Humanidades. Se espera que todos quienes se encuentran habilitados para dirigir tesis,                     demuestren su contribución científica y académica a través de publicaciones y                                 proyectos.»</em></div><br>
+            </td>
+            <td style="outline: thin solid" rowspan="1" colspan="1">
+                <div style="text-align: justify; ">Fortalecer la productividad del claustro y diversificar la                 composición de sus integrantes (incorporación de nuevas contrataciones, fortalecimiento de la                 interdisciplina e integración de académicos extranjeros en el marco de los vínculos de                       cooperación).</div><br>
+            </td>
+            <td style="outline: thin solid" rowspan="1" colspan="1"><div style="text-align: justify; ">                       Composición actualizada de integrantes del claustro: nuevas contrataciones, refuerzo de                       interdisciplina, académicos extranjeros que se incorporan al claustro como resultado de los                   vínculos formales de cooperación.<br><br>Porcentaje de integrantes de claustro que satisfacen                 las orientaciones de productividad (en publicaciones y proyectos).</div><br>
+            </td>
+            <td style="outline: thin solid" rowspan="1" colspan="1"><div style="text-align: justify; ">                       Se registran mejoras significativas:<br><br>Se incrementa a 75% (12/16) el número de                         académicos de claustro que satisface la orientación de productividad en publicaciones WoS.                   <br><br>Se incrementa a 69% (11/16) el número de académicos de claustro que satisface la                     orientación de proyectos externos como IR.</div><br>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 7px;background:#036ED1;"></td>
+            <td style="outline: thin solid" rowspan="1" colspan="1"><div style="text-align: justify; ">                       <em>«El sustento de las líneas de investigación del Magíster se encuentra equilibrado; no                     obstante, la guía de tesis se encuentra concentrada en un académico del Claustro.»</em></div>                 <br>
+            </td>
+            <td style="outline: thin solid" rowspan="1" colspan="1">
+                <div style="text-align: justify; ">Reforzar las funciones de planificación y supervisión del                 Comité de Programa para asegurar una distribución equilibrada de patrocinio de tesis entre                   los integrantes del claustro.<br><br> Ampliar y diversificar la composición del claustro y la                 plataforma de proyectos para sustento de las líneas de investigación.</div><br>
+            </td>
+            <td style="outline: thin solid" rowspan="1" colspan="1">
+                <div style="text-align: justify; ">Distribución de tesis finalizadas por académico de                         claustro (informe anual).<br><br>Distribución de tesis en desarrollo por académico de                         claustro (informe anual).<br><br>Composición actualizada del claustro (informe anual).<br>                   <br> Tesis en desarrollo asociadas a proyectos y recursos de apoyo de integrantes del                         claustro</div><br>
+            </td>
+            <td style="outline: thin solid" rowspan="1" colspan="1">
+                <div style="text-align: justify; ">Observación subsanada:<br><br>El patrocinio de tesis                       (finalizadas y en desarrollo) se distribuye de modo equilibrado entre los integrantes del                     claustro (v. secciones 3.4.2 y 3.5.1).<br><br>Se amplía y diversifica el claustro del                         programa (v. sección 4.1).<br><br>El 100% de las tesis en desarrollo se                                       encuentra asociada a proyectos de integrantes del claustro (v. 3.4.2).</div><br>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 7px;background:#036ED1;"></td>
+            <td style="outline: thin solid" rowspan="1" colspan="1"><div style="text-align: justify; ">                       <em>«La vinculación con el medio relacionada con la naturaleza y temática del magíster es                     insuficiente, principalmente en el ámbito nacional.»</em></div>                 <br>
+            </td>
+            <td style="outline: thin solid" rowspan="1" colspan="1">
+                <div style="text-align: justify; ">Fortalecer la vinculación con el medio nacional en las                     temáticas del programa mediante la suscripción de nuevos e intensificación de la actividad de                 los existentes.<br><br> Documentar con mayor detalle de las actividades de vinculación con el                 medio nacional con énfasis en el desarrollo de tesis y proyectos del programa.<br>                           <br>Incorporar el fortalecimiento de la vinculación con el medio en los instrumentos de                       planificación de la Facultad.</div><br>
+            </td>
+            <td style="outline: thin solid" rowspan="1" colspan="1">
+                <div style="text-align: justify; ">Convenios suscritos con entidades nacionales del medio                     relacionadas a la temática del programa.<br><br>Proyectos y tesis del programa desarrolladas                 en asociación con entidades del entorno socioproductivo en los últimos cinco años.<br>                       <br>Fortalecimiento de la vinculación con el medio en los instrumentos de planificación de la                 Facultad.</div><br>
+            </td>
+            <td style="outline: thin solid" rowspan="1" colspan="1">
+                <div style="text-align: justify; ">Observación subsanada:<br><br>La vinculación con el medio                 nacional se incrementa de modo relevante, demostrada a través de la adjudicación de proyectos                 (FONDEF, Innoving 2030, otros) y convenios con entidades relacionadas a las temáticas del                     programa.<br><br>Se registra un alto número de actividades del programa (desarrollo de tesis                 y proyectos) en asociación con entidades del entorno socio productivo (v. sección 5.2.3).                     </div><br>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 7px;background:#036ED1;"></td>
+            <td style="outline: thin solid" rowspan="1" colspan="1"><div style="text-align: justify; ">                       <em>«En términos de autorregulación, el Programa presenta un Plan de Desarrollo con                           objetivos, acciones de mejoramiento, indicadores, plazos, responsables y recursos asociados,                 el cual es factible de realizarse y responde a las principales debilidades observadas en el                   proceso de evaluación externa. No obstante, no identifica claramente la debilidad relacionada                 con la baja productividad que posee el cuerpo académico y el mínimo cumplimiento de los                       criterios de CNA, que establecen que el claustro de un magíster, debe contar con al menos                     cuatro académicos jornada completa que cumplan las orientaciones de productividad                             establecidas por el Comité de Área, pertinente a la disciplina en que se enmarca el                           Programa»</em></div><br>
+            </td>
+            <td style="outline: thin solid" rowspan="1" colspan="1">
+                <div style="text-align: justify; ">Corregir el Plan de Desarrollo del programa e identificar                 con claridad la debilidad relacionada al nivel de cumplimiento de las orientaciones de                       productividad del Comité de Área por parte del cuerpo académico.<br><br> Establecer                           objetivos, acciones de mejoramiento, indicadores, plazos y recursos que permitan revertir esa                 debilidad.<br><br>Incorporar el fortalecimiento del cuerpo académico y su productividad                       científica en los instrumentos de planificación de la Facultad.</div><br>
+            </td>
+            <td style="outline: thin solid" rowspan="1" colspan="1">
+                <div style="text-align: justify; ">Plan de Desarrollo del programa corregido y actualizado.                    <br><br>Refuerzo del cuerpo académico incorporado como objetivo explícito en otros                            instrumentos de planificación de la Facultad.</div><br>
+            </td>
+            <td style="outline: thin solid" rowspan="1" colspan="1">
+                <div style="text-align: justify; ">Observación subsanada:<br><br>El programa corrigió su Plan                 de Desarrollo e identificó de modo explícito como debilidad la baja productividad del cuerpo                 académico y cumplimiento mínimo .<br><br>El Plan Estratégico de la Facultad 2020-2023 (Anexo                 15) incluye entre sus objetivos el fortalecimiento de los claustros académicos de postgrado                   (énfasis en el desarrollo de este objetivo a través de la internacionalización).<br><br>Se                   incorporan nuevos académicos al claustro (recursos para instalación financiada con el                         proyecto institucional de la FCI Innoving 2030 e intensificación de convenios de colaboración                 con universidades extranjeras).</div><br>
+            </td>
+        </tr>
+</tbody>
+</table>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<table align="left" style="width:100%">
+    <tbody style="font-size: 14px";>
+        <tr style="text-align: center; ">
+        <td style="width: 7px;background:#036ED1;"></td>    
+        <td style="outline: thin solid" colspan="1">
+            <br><div style="text-align: justify; "><sup style="font-size: 12px;">1</sup>El contenido en profundidad, tanto del plan de desarrollo como del avance respecto del proceso de acreditación previo, deberá desarrollarse en el informe de autoevaluación.</div><br>
+            </td>
+      </tr>
+</tbody>
+</table>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "pedro"
+        },
+        kernelOptions: {
+            kernelName: "pedro",
+            path: "./contenidos/unidad2"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'pedro'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="Recursos%20de%20Apoyo.html" title="anterior página">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title"><span class="section-number">10. </span>RECURSOS DE APOYO</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../unidad3/Anexo%207%20Fichas%20Acad%C3%A9micas.html" title="siguiente página">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">siguiente</p>
+        <p class="prev-next-title"><span class="section-number">12. </span>ANEXO 7:	FICHA ACADÉMICA:</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Víctor Poblete, Joaquín Morales, Pedro Galindo<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
